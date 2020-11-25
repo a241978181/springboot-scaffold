@@ -29,7 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d206d270-e142-4689-884c-095d6758ad19" name="Default Changelist" comment="修复部分问题">
+      <change afterPath="$PROJECT_DIR$/docs/postman/springboot-scaffold项目接口.postman_collection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/util/EncryptConfigUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/util/EncryptConfigUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +56,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/docs/content/BaseService.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docs/content/LoginFailureInterceptor.md" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docs/content/auth.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docs/content/BaseService.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -81,7 +86,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/postman" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,7 +97,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -163,15 +168,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,6 +229,8 @@
       <workItem from="1606203601476" duration="863000" />
       <workItem from="1606204476699" duration="4002000" />
       <workItem from="1606269634688" duration="1069000" />
+      <workItem from="1606271055167" duration="34000" />
+      <workItem from="1606271104398" duration="449000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1603691248879</created>
@@ -434,10 +439,10 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2610" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1605856310296" />
-    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606201214950">
+    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606271211439">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606201214950" />
+    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606271211439" />
     <state x="2685" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1606123103259">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -510,10 +515,10 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2410" y="174" key="Maven.ArtifactSearchDialog/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1605840984130" />
-    <state x="2381" y="164" key="SettingsEditor" timestamp="1606181108668">
+    <state x="2381" y="164" key="SettingsEditor" timestamp="1606271070408">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2381" y="164" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606181108668" />
+    <state x="2381" y="164" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606271070408" />
     <state x="2472" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606208071144">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -538,10 +543,10 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2672" y="378" key="scopes/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606183990989" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606181000738">
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606271263794">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606181000738" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606271263794" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

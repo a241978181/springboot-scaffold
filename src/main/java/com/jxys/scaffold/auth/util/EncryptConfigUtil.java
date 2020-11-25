@@ -54,9 +54,9 @@ public class EncryptConfigUtil {
 
     public static void main(String[] args) {
         // 加密
-        String encPwd = encyptPwd("2190268123asd", "2190268123asd");
+        String encPwd = encyptPwd("jasypt", "123456");
         // 解密
-        String decPwd = decyptPwd("2190268123asd", encPwd);
+        String decPwd = decyptPwd("jasypt", encPwd);
         System.out.println(encPwd);
         System.out.println(decPwd);
     }

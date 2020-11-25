@@ -6,9 +6,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver     # 数据库驱动
-      url: jdbc:mysql://cdb-pr3h14sl.gz.tencentcdb.com:10001/seed?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接
-      username: ENC(xXYHEoPD8rTpHa+PVM7/vA==)     # 数据库账号
-      password: ENC(IoNLw/J8J5q2BfDo3PDjxpugNDqGFWuM)     # 数据库密码
+      url: jdbc:mysql://您的数据库地址:您的数据库端口/seed?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接
+      username: ENC(xXYHEoPD8rTpHa+PVM7/vA==)     # 数据库账号（需要替换成您的数据库账号）
+      password: ENC(IoNLw/J8J5q2BfDo3PDjxpugNDqGFWuM)     # 数据库密码（需要替换成您的数据库密码）
       type: com.alibaba.druid.pool.DruidDataSource
       initial-size: 5
       min-idle: 5

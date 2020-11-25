@@ -1,0 +1,83 @@
+{
+  "info": {
+    "_postman_id": "8d1bb400-e348-4ed7-a5f6-084f5082730f",
+    "name": "springboot-scaffold项目接口",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "注册接口",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"李建\",\r\n    \"password\":\"123456\",\r\n    \"email\":\"a2417978181@163.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8081/v1/user/signUp"
+      },
+      "response": []
+    },
+    {
+      "name": "登录接口",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"李建\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8081/v1/user/signIn"
+      },
+      "response": []
+    },
+    {
+      "name": "查看用户列表",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Access-Token",
+            "value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjAxNjMxNzc2YTE4NjE1NzljNDAxNDJjMTNhN2ZmOWEzIiwic3ViIjoiQUNDRVNTIiwiZXhwIjoxNjA2MjIwNDYwfQ.BjpTzRQ9w7M4yQI0AY37PUirhKPrEsQNyFYNheKNI1s",
+            "type": "text"
+          }
+        ],
+        "url": "http://localhost:8081/v1/user/list"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "931ed35a-b62a-4641-bc99-81e3c13350f8",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "9000d650-0cd4-44d4-9c1b-08676c0f5ccd",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
