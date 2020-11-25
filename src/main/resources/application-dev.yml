@@ -1,0 +1,68 @@
+# 开发环境配置文件
+server:
+  port: 8081     # Springboot占用端口
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver     # 数据库驱动
+      url: jdbc:mysql://cdb-pr3h14sl.gz.tencentcdb.com:10001/seed?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接
+      username: ENC(jgP1ohsM4ORypevdEl7nzA==)     # 数据库账号
+      password: ENC(ZDi7+9lu0JNtu82G0PS6FSTjtCIemhNi)     # 数据库密码
+      type: com.alibaba.druid.pool.DruidDataSource
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+  redis:
+    password:
+    port: 6379
+    #线上环境
+    host: localhost
+    lettuce:
+      pool:
+        # 最大空闲连接数 默认8
+        max-idle: 8
+        # 最小空闲连接数 默认0
+        min-idle: 0
+        # 最大活跃链接数 默认8
+        max-active: 8
+    #请求时间
+    timeout: 5000
+  devtools:
+    restart:
+      enabled: true     # 开启热更新
+
+mybatis:
+  type-aliases-package: com.jxys.scaffold.*.entity
+  mapper-locations: classpath:Mapper/*/*.xml
+  global-config:
+  #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+  id-type: 3
+  #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+  field-strategy: 2
+  #驼峰下划线转换
+  db-column-underline: false
+  #刷新mapper 调试神器
+  refresh-mapper: true
+  #数据库大写下划线转换
+  capital-mode: false
+  #序列接口实现类配置
+  #key-generator: com.baomidou.springboot.xxx
+  #逻辑删除配置（下面3个配置）
+  logic-delete-value: 0
+  logic-not-delete-value: 1
+  #自定义SQL注入器
+  #sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  #自定义填充策略接口实现
+  #meta-object-handler: com.baomidou.springboot.xxx
+  map-underscore-to-camel-case: true
+  cache-enabled: false

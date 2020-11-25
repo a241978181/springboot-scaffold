@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+	<springProperty scope="context" name="sqlLevel" source="log.level"></springProperty>
+	<springProperty scope="context" name="logPath" source="log.path"></springProperty>
+	<property name="encoding" value="UTF-8"/>
+	<!-- 控制台输出 -->
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoder 默认配置为PatternLayoutEncoder -->
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%yellow(%d{yyyy-MM-dd HH:mm:ss}) %red([%thread]) %highlight(%-5level) %cyan(%logger{50}) - %magenta(%msg) %n</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<!--根据日志级别分离日志，分别输出到不同的文件-->
+	<appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>DENY</onMatch>
+			<onMismatch>ACCEPT</onMismatch>
+		</filter>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n
+			</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+		<!--滚动策略-->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--按时间保存日志 修改格式可以按小时、按天、月来保存-->
+			<fileNamePattern>${logPath}jxysgzs.info.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<!--保存时长-->
+			<MaxHistory>90</MaxHistory>
+			<!--文件大小-->
+			<totalSizeCap>1GB</totalSizeCap>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>ERROR</level>
+		</filter>
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n
+			</pattern>
+			<charset class="java.nio.charset.Charset">UTF-8</charset>
+		</encoder>
+		<!--滚动策略-->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--路径-->
+			<fileNamePattern>${logPath}jxysgzs.error.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<MaxHistory>90</MaxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<!-- root: 默认日志输出 -->
+	<root level="INFO">
+		<appender-ref ref="Console"/>
+<!--		<appender-ref ref="fileInfoLog"/>-->
+<!--		<appender-ref ref="fileErrorLog"/>-->
+	</root>
+
+	<logger name="com.jxys.scaffold.user.mapper" level="${sqlLevel}">
+		<appender-ref ref="Console"/>
+<!--		<appender-ref ref="fileInfoLog"/>-->
+<!--		<appender-ref ref="fileErrorLog"/>-->
+	</logger>
+
+</configuration>
