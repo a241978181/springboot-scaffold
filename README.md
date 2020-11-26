@@ -13,7 +13,11 @@ SpringBoot Scaffold脚手架
 2. 修改`application.yml`等三个配置文件下的数据库与Redis信息
 3. 开始编写业务代码
 
-## 快速入门
+## 更新简报
+
+> v1.01
+>
+集成了[hutool 5.5.1工具类](https://hutool.cn/docs/#/)
 
 
 
@@ -51,4 +55,5 @@ SpringBoot Scaffold脚手架
 - swagger
 - Redis
 - jasypt
+- hutool
 
