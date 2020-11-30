@@ -27,18 +27,19 @@ public class InterceptorConfig implements WebMvcConfigurer {
 		/*//注册自己的拦截器,并设置拦截路径，拦截多个可以全一个list集合*/
 		//业务接口
 		List<String> excludeList=new ArrayList<>();
-		excludeList.add("/user/signIn");
-		excludeList.add("/user/signUp");
-		//组件接口
-		excludeList.add("/swagger-resources/**");
-		excludeList.add("/webjars/**");
-		excludeList.add("/v2/**");
-		excludeList.add("/error");
-		excludeList.add("/csrf");
-		excludeList.add("/");
-		excludeList.add("/swagger-ui.html/**");
-		registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**").excludePathPatterns(excludeList);
-	}
+        excludeList.add("/user/signIn");
+        excludeList.add("/user/signUp");
+        //组件接口
+        excludeList.add("/swagger-resources/**");
+        excludeList.add("/webjars/**");
+        excludeList.add("/v2/**");
+        excludeList.add("/error");
+        excludeList.add("/csrf");
+        excludeList.add("/");
+        excludeList.add("/swagger-ui.html/**");
+        excludeList.add("/doc.html/**");
+        registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/**").excludePathPatterns(excludeList);
+    }
 
 	/**
 	 * 添加认证注解参数解析器
@@ -57,11 +58,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/**").addResourceLocations(
-				"classpath:/static/");
-		registry.addResourceHandler("swagger-ui.html").addResourceLocations(
-				"classpath:/META-INF/resources/");
-		registry.addResourceHandler("/webjars/**").addResourceLocations(
-				"classpath:/META-INF/resources/webjars/");
-	}
+        registry.addResourceHandler("/**").addResourceLocations(
+                "classpath:/static/");
+        registry.addResourceHandler("swagger-ui.html").addResourceLocations(
+                "classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations(
+                "classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
+    }
 }
