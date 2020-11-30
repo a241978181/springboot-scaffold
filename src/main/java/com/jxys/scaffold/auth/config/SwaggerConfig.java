@@ -40,7 +40,7 @@ public class SwaggerConfig {
                 .title("后台管理系统-API文档")
                 .description("本文档描述了后台管理系统微服务接口定义")
                 .version("1.0")
-                .contact(new Contact("Helen", "http://localhost:8081", "a2417978181@163.com"))
+                .contact(new Contact("李建", "http://localhost:8081", "a2417978181@163.com"))
                 .build();
     }
 }

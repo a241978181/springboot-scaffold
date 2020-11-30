@@ -15,9 +15,9 @@ SpringBoot Scaffold脚手架
 
 ## 更新简报
 
-> v1.01
+> v1.02
 >
-集成了[hutool 5.5.1工具类](https://hutool.cn/docs/#/)
+集成了[Swagger-Bootstrap-UI](https://github.com/xiaoymin/Swagger-Bootstrap-UI)
 
 
 
@@ -56,4 +56,5 @@ SpringBoot Scaffold脚手架
 - Redis
 - jasypt
 - hutool
+- Swagger-Bootstrap-UI
 

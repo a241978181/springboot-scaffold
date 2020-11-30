@@ -20,21 +20,14 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d206d270-e142-4689-884c-095d6758ad19" name="Default Changelist" comment="集成了hutool 5.5.1工具组件">
-      <change afterPath="$PROJECT_DIR$/docs/content/swagger.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/image/swagger/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/image/swagger/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/image/swagger/3.jpg" afterDir="false" />
+    <list default="true" id="d206d270-e142-4689-884c-095d6758ad19" name="Default Changelist" comment="集成了swagger-bootstrap-ui接口文档界面工具">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/InterceptorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +47,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/docs/content/BaseService.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
@@ -219,7 +213,7 @@
       <workItem from="1606357735410" duration="1492000" />
       <workItem from="1606447984830" duration="18000" />
       <workItem from="1606448087099" duration="814000" />
-      <workItem from="1606723041249" duration="2722000" />
+      <workItem from="1606723041249" duration="3041000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1603691248879</created>
@@ -375,7 +369,28 @@
       <option name="project" value="LOCAL" />
       <updated>1606358078290</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="集成了swagger-bootstrap-ui接口文档界面工具">
+      <created>1606726259060</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1606726259060</updated>
+    </task>
+    <task id="LOCAL-00024" summary="集成了swagger-bootstrap-ui接口文档界面工具">
+      <created>1606726302160</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606726302160</updated>
+    </task>
+    <task id="LOCAL-00025" summary="集成了swagger-bootstrap-ui接口文档界面工具">
+      <created>1606726342583</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1606726342583</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +420,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -438,7 +453,8 @@
     <MESSAGE value="修复部分问题" />
     <MESSAGE value="V1版本发布" />
     <MESSAGE value="集成了hutool 5.5.1工具组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="集成了hutool 5.5.1工具组件" />
+    <MESSAGE value="集成了swagger-bootstrap-ui接口文档界面工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成了swagger-bootstrap-ui接口文档界面工具" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -460,10 +476,10 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2360" y="94" key="#项目结构/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606270241393" />
-    <state x="2484" y="88" key="CommitChangelistDialog2" timestamp="1606358077652">
+    <state x="2484" y="88" key="CommitChangelistDialog2" timestamp="1606726354884">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2484" y="88" key="CommitChangelistDialog2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606358077652" />
+    <state x="2484" y="88" key="CommitChangelistDialog2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726354884" />
     <state x="2258" y="173" width="1228" height="688" key="DiffContextDialog" timestamp="1606182075209">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -472,38 +488,38 @@
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
     <state x="2660" y="274" key="FileChooserDialogImpl/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1605842066779" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1606208481914">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606726309497">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481914" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1606208481913">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309497" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606726309497">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481913" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1606208481913">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309497" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606726309497">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481913" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1606208481913">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309497" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606726309497">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481913" />
-    <state width="1877" height="295" key="GridCell.Tab.1.bottom" timestamp="1606208481914">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309497" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1606726309498">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.bottom/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481914" />
-    <state width="1877" height="295" key="GridCell.Tab.1.center" timestamp="1606208481914">
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309498" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1606726309498">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.center/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481914" />
-    <state width="1877" height="295" key="GridCell.Tab.1.left" timestamp="1606208481914">
+    <state width="1877" height="282" key="GridCell.Tab.1.center/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309498" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1606726309498">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.left/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481914" />
-    <state width="1877" height="295" key="GridCell.Tab.1.right" timestamp="1606208481914">
+    <state width="1877" height="282" key="GridCell.Tab.1.left/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309498" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1606726309498">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606208481914" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726309498" />
     <state width="1877" height="238" key="GridCell.Tab.2.bottom" timestamp="1606203589322">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
@@ -529,10 +545,10 @@
     </state>
     <state x="369" y="113" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@0.0.1536.824" timestamp="1606357640689" />
     <state x="2381" y="164" key="SettingsEditor/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606358212820" />
-    <state x="2472" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606358118511">
+    <state x="2472" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606726359871">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
-    <state x="2472" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606358118511" />
+    <state x="2472" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1030/0.0.1536.824@1920.0.1920.1030" timestamp="1606726359871" />
     <state x="2693" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606181728743">
       <screen x="1920" y="0" width="1920" height="1030" />
     </state>
