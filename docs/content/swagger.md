@@ -43,14 +43,16 @@ public class SwaggerConfig {
 
 ## 项目展示图片
 
-![springboot-scaffold](../image/swagger/1.jpg)
+![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRGrJU.jpg)
 #
-![springboot-scaffold](../image/swagger/2.jpg)
+![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRGDiT.jpg)
 #
-![springboot-scaffold](../image/swagger/3.jpg)
+![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRG0oV.jpg)
 
 
 >当然项目中还保留了springfox-swagger-ui 如不需要则可可以去除。
 #
 >springfox-swagger-ui访问地址 `http://localhost:8081/v1/swagger-ui.html`
->
+
+ 
+ 
