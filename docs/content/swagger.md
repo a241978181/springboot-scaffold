@@ -43,11 +43,11 @@ public class SwaggerConfig {
 
 ## 项目展示图片
 
-![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRGrJU.jpg)
+![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRGrJU.jpg "springboot-scaffold")
 #
-![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRGDiT.jpg)
+![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRGDiT.jpg "springboot-scaffold")
 #
-![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRG0oV.jpg)
+![springboot-scaffold](https://s3.ax1x.com/2020/11/30/DRG0oV.jpg "springboot-scaffold")
 
 
 >当然项目中还保留了springfox-swagger-ui 如不需要则可可以去除。
