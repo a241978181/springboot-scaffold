@@ -12,8 +12,14 @@ spring:
       enabled: true
   mvc:
     throw-exception-if-no-handler-found: true     # 接口404时抛出异常
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+      favicon:
+        enabled: false
   resources:
     add-mappings: false
+    static-locations: classpath:/static/,classpath:/META-INF/resources/,classpath:/META-INF/resources/webjars/
 
 server:
   servlet:
@@ -28,3 +34,8 @@ jasypt:
     # 指定加密方式
     algorithm: PBEWithMD5AndDES
     iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+#---------mybatis------------------------
+mybatis-plus:
+  type-aliases-package: com.jxys.scaffold.*.entity
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
