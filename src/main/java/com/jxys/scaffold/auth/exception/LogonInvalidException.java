@@ -9,6 +9,6 @@ import com.jxys.scaffold.base.exception.ServiceException;
  **/
 public class LogonInvalidException extends ServiceException {
     public LogonInvalidException() {
-        super("401","登录已过期，请重新登录。");
+        super("登录已过期，请重新登录。", 401);
     }
 }
