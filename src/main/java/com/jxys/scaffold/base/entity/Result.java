@@ -1,6 +1,8 @@
 package com.jxys.scaffold.base.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * 返回结果实体类
@@ -10,12 +12,14 @@ import lombok.Getter;
  * @since 2018/12/6
  */
 @Getter
-public class Result {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Result<T> {
     private int code;
     private String message;
-    private Object data;
+    private T data;
 
-    private Result setResult(int code, String message, Object data) {
+    private Result setResult(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -26,15 +30,27 @@ public class Result {
         return setResult(200, "Success", null);
     }
 
-    public Result success(Object data) {
+    public Result success(String message) {
+        return setResult(200, message, null);
+    }
+
+    public Result success(T data) {
         return setResult(200, "Success", data);
     }
 
-    public Result fail(Object data, String message) {
-        return setResult(400, message, data);
+    public Result success(T data, String message) {
+        return setResult(200, message, data);
     }
 
-    public Result fail(Object data, String message, int code) {
+    public Result fail(T data, String message) {
+        return setResult(500, message, data);
+    }
+
+    public Result fail(String message) {
+        return setResult(500, message, null);
+    }
+
+    public Result fail(T data, String message, int code) {
         return setResult(code, message, data);
     }
 

@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-scaffold" />
         <module name="seed" />
+        <module name="scaffold" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="scaffold" options="-parameters" />
       <module name="seed" options="-parameters" />
       <module name="springboot-scaffold" options="-parameters" />
     </option>

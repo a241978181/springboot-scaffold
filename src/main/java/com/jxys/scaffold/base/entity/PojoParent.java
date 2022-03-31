@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 实体类父类
@@ -22,11 +23,11 @@ public class PojoParent implements Serializable {
 
     //create_time(增加时间)
     @TableField(fill = FieldFill.INSERT)
-    private Integer createTime;
+    private Date createTime;
 
     //update_time(修改时间)
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Integer updateTime;
+    private Date updateTime;
 
 
 }

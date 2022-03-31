@@ -1,6 +1,6 @@
 package com.jxys.scaffold.user.controller;
 
-import com.jxys.scaffold.auth.annotation.Auth;
+import com.jxys.scaffold.base.entity.BaseController;
 import com.jxys.scaffold.base.entity.Result;
 import com.jxys.scaffold.user.data.SignInData;
 import com.jxys.scaffold.user.data.SignUpData;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserController extends BaseController {
     @Autowired
     private UserService userService;
 
@@ -21,7 +21,7 @@ public class UserController {
     @PostMapping("/signIn")
     public Result signIn(@RequestBody @Validated SignInData data) {
         // 使用SpringValidation校验数据
-        return new Result().success(userService.signIn(data));
+        return success("登录成功", userService.signIn(data));
     }
 
     /**
@@ -31,24 +31,16 @@ public class UserController {
     public Result signUp(@RequestBody @Validated SignUpData data) {
         // 使用SpringValidation校验数据
         String result = userService.signUp(data);
-        return new Result().success(result);
+        return success(result);
     }
 
-    /**
-     * 查看当前用户的Id
-     */
-    @GetMapping
-    public Result get(@Auth(required = false) Long userId) {
-        // 该接口可以不登陆，未登陆时返回的结果为空，登陆时会返回当前登陆用户的Id
-        return new Result().success(userId);
-    }
 
     /**
      * 根据Id查看单个用户的信息
      */
     @GetMapping("/{userId}")
     public Result get(@PathVariable("userId") String userId) {
-        return new Result().success(userService.getById(userId));
+        return success("查询成功", userService.getById(userId));
     }
 
     /**
@@ -57,6 +49,6 @@ public class UserController {
     @GetMapping("/list")
     public Result list() {
         // 该接口需要检测用户是否登陆
-        return new Result().success(userService.list());
+        return success("查询成功", userService.list());
     }
 }

@@ -27,8 +27,8 @@ CREATE TABLE `user`
     `name`        varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci  NULL DEFAULT NULL COMMENT '名称',
     `password`    varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '密码',
     `email`       varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci  NULL DEFAULT NULL COMMENT '邮箱',
-    `create_time` int(11)                                                       NULL DEFAULT NULL COMMENT '创建时间',
-    `update_time` int(11)                                                       NULL DEFAULT NULL COMMENT '修改时间',
+    `create_time` datetime(0)                                                   NULL DEFAULT NULL COMMENT '创建时间',
+    `update_time` datetime(0)                                                   NULL DEFAULT NULL COMMENT '修改时间',
     PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB
   CHARACTER SET = utf8mb4
@@ -39,6 +39,6 @@ CREATE TABLE `user`
 -- Records of user
 -- ----------------------------
 INSERT INTO `user`
-VALUES ('08ee656852d253b8cc0f80b9e4a7c0f2', '李建', '6sSY/6YrFcbHud21UUxNaw==', 'a2417978181@163.com', 1606199346, NULL);
+VALUES ('08ee656852d253b8cc0f80b9e4a7c0f2', '李建', '6sSY/6YrFcbHud21UUxNaw==', 'a2417978181@163.com', NULL, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

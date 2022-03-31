@@ -1,7 +1,10 @@
 package com.jxys.scaffold.auth.config;
 
-import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
+import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,14 +20,40 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("com.jxys.scaffold.*.mapper")
 public class MybatisPlusConfig {
     @Bean
-    public PaginationInterceptor paginationInterceptor() {
-        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
-        // 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false
-        // paginationInterceptor.setOverflow(false);
+    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        // 分页插件
+        interceptor.addInnerInterceptor(paginationInnerInterceptor());
+        // 乐观锁插件
+        interceptor.addInnerInterceptor(optimisticLockerInnerInterceptor());
+        // 阻断插件
+        interceptor.addInnerInterceptor(blockAttackInnerInterceptor());
+        return interceptor;
+    }
+
+    /**
+     * 分页插件，自动识别数据库类型 https://baomidou.com/guide/interceptor-pagination.html
+     */
+    public PaginationInnerInterceptor paginationInnerInterceptor() {
+        PaginationInnerInterceptor paginationInnerInterceptor = new PaginationInnerInterceptor();
+        // 设置数据库类型为mysql
+        paginationInnerInterceptor.setDbType(DbType.MYSQL);
         // 设置最大单页限制数量，默认 500 条，-1 不受限制
-        // paginationInterceptor.setLimit(500);
-        // 开启 count 的 join 优化,只针对部分 left join
-        paginationInterceptor.setCountSqlParser(new JsqlParserCountOptimize(true));
-        return paginationInterceptor;
+        paginationInnerInterceptor.setMaxLimit(-1L);
+        return paginationInnerInterceptor;
+    }
+
+    /**
+     * 乐观锁插件 https://baomidou.com/guide/interceptor-optimistic-locker.html
+     */
+    public OptimisticLockerInnerInterceptor optimisticLockerInnerInterceptor() {
+        return new OptimisticLockerInnerInterceptor();
+    }
+
+    /**
+     * 如果是对全表的删除或更新操作，就会终止该操作 https://baomidou.com/guide/interceptor-block-attack.html
+     */
+    public BlockAttackInnerInterceptor blockAttackInnerInterceptor() {
+        return new BlockAttackInnerInterceptor();
     }
 }
