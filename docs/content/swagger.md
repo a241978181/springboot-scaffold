@@ -19,7 +19,7 @@ public class SwaggerConfig {
                 .apiInfo(adminApiInfo())
                 .select()
                 //在其他项目中创建Controller时需要添加如下代码指定位置
-                .apis(RequestHandlerSelectors.basePackage("com.jxys.scaffold.user.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.jxys.user.controller"))
                 .paths(PathSelectors.any())
                 .build();
 

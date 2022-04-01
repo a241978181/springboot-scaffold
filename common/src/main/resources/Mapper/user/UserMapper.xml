@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxys.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.jxys.entity.User">
+    <id column="id" jdbcType="VARCHAR" property="id"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+    <result column="password" jdbcType="VARCHAR" property="password"/>
+    <result column="email" jdbcType="VARCHAR" property="email"/>
+    <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+    <result column="update_time" jdbcType="INTEGER" property="updateTime"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id
+    , `name`, `password`, email, create_time, update_time
+  </sql>
+  <insert id="insertOneUser" parameterType="com.jxys.entity.User">
+    insert into user (id, `name`, `password`,
+                      email, create_time, update_time)
+    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+            #{email,jdbcType=VARCHAR}, #{createTime,jdbcType=INTEGER}, #{updateTime,jdbcType=INTEGER})
+  </insert>
+
+</mapper>

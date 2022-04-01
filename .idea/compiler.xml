@@ -8,13 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-scaffold" />
+        <module name="api" />
         <module name="seed" />
-        <module name="scaffold" />
+        <module name="common" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api" options="-parameters" />
+      <module name="common" options="-parameters" />
       <module name="scaffold" options="-parameters" />
       <module name="seed" options="-parameters" />
       <module name="springboot-scaffold" options="-parameters" />

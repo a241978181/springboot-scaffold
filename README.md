@@ -4,8 +4,7 @@ SpringBoot Scaffold脚手架
 
 ## 简介
 
-这是一个基于`SpringBoot 2.2.7 RELEASE`，用于构建`RESTful API`工程的脚手架，工程已经集成大量插件与
-风格定义类，为您节省了大量的开发时间，只需`一分钟`即可开始编写业务代码。
+这是一个基于`SpringBoot 2.2.7 RELEASE`，用于构建`RESTful API`工程的脚手架，工程已经集成大量插件与 风格定义类，为您节省了大量的开发时间，只需`一分钟`即可开始编写业务代码。
 
 ## 快速开始
 
@@ -15,11 +14,15 @@ SpringBoot Scaffold脚手架
 
 ## 更新简报
 
+> v1.10
+>
+
+1. 将项目重构为聚合项目
+2. 修改了mp的默认插入和修改字段createTime、createTime的格式，以datetime形式保存。
+
 > v1.02
 >
 集成了[Swagger-Bootstrap-UI](https://github.com/xiaoymin/Swagger-Bootstrap-UI)
-
-
 
 ## [文档](./docs/index.md)
 

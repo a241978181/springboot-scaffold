@@ -8,12 +8,12 @@
 等大致一次调用信息如下：
 
 ```java_holder_method_tree
-2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.scaffold.user.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,name,password,email,create_time,update_time FROM user WHERE (name = ?)  
-2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.scaffold.user.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,name,password,email,create_time,update_time FROM user WHERE (name = ?)  
-2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.scaffold.user.mapper.UserMapper.selectOne - ==> Parameters: 李建(String) 
-2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.scaffold.user.mapper.UserMapper.selectOne - ==> Parameters: 李建(String) 
-2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.scaffold.user.mapper.UserMapper.selectOne - <==      Total: 1 
-2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.scaffold.user.mapper.UserMapper.selectOne - <==      Total: 1 
+2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,name,password,email,create_time,update_time FROM user WHERE (name = ?)  
+2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,name,password,email,create_time,update_time FROM user WHERE (name = ?)  
+2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.mapper.UserMapper.selectOne - ==> Parameters: 李建(String) 
+2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.mapper.UserMapper.selectOne - ==> Parameters: 李建(String) 
+2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.mapper.UserMapper.selectOne - <==      Total: 1 
+2020-11-24 16:28:41 [http-nio-8081-exec-4] DEBUG com.jxys.mapper.UserMapper.selectOne - <==      Total: 1 
 ```
 
 ## 日志输出位置
@@ -28,7 +28,7 @@
 <!--		<appender-ref ref="fileErrorLog"/>-->
 	</root>
 
-	<logger name="com.jxys.scaffold.user.mapper" level="${sqlLevel}">
+	<logger name="com.jxys.mapper" level="${sqlLevel}">
 		<appender-ref ref="Console"/>
 <!--		<appender-ref ref="fileInfoLog"/>-->
 <!--		<appender-ref ref="fileErrorLog"/>-->

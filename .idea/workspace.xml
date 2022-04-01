@@ -28,18 +28,63 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d206d270-e142-4689-884c-095d6758ad19" name="Default Changelist" comment="解决了swagger-bootstarup-ui的刷新报错问题">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/MyMetaObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/service/RedisService.java" afterDir="false" />
+    <list default="true" id="d206d270-e142-4689-884c-095d6758ad19" name="Default Changelist" comment="微调了返回值，输入数据库时间，RedisService等功能">
+      <change afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logPath_IS_UNDEFINEDjxysgzs.error.2022-04-01.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logPath_IS_UNDEFINEDjxysgzs.info.2022-04-01.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sql/seed.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sql/seed.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/PojoParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/PojoParent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/content/logback.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/content/logback.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/content/swagger.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/content/swagger.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/annotation/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/annotation/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/annotation/resolver/AuthMethodArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/annotation/resolver/AuthMethodArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/InterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/config/InterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/config/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/enums/TokenSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/enums/TokenSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/exception/AuthException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/exception/AuthException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/exception/LogonInvalidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/exception/LogonInvalidException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/exception/TokenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/exception/TokenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/exception/UnauthorizedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/exception/UnauthorizedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/interceptor/LoginFailureInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/interceptor/LoginFailureInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/service/impl/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/auth/util/EncryptConfigUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/auth/util/EncryptConfigUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/config/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/config/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/entity/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/entity/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/PojoParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/entity/PojoParent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/entity/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/exception/ErrorServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/exception/ErrorServiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/exception/ServiceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/exception/ServiceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/handler/ExceptionsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/handler/ExceptionsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/handler/MyMetaObjectHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/base/service/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/base/service/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/data/SignInData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/data/SignInData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/data/SignUpData.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/data/SignUpData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/exception/LoggedNotException.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/user/exception/LoggedNotException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/exception/PasswordErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/user/exception/PasswordErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/user/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/jxys/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jxys/scaffold/user/view/SignInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/jxys/view/SignInView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Mapper/user/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/Mapper/user/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +112,14 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/docs/content/BaseService.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docs/content/auth.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
@@ -79,6 +132,9 @@
         <option name="userSettingsFile" value="F:\maven\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1jG9GufWOJOO5rmtBT16TBR9vQh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -108,8 +164,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="模块" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -126,6 +182,8 @@
       <recent name="F:\textjava\idea\springboot-restful-starter\src\main\resources\Mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\testjava\my\springboot-scaffold\common\src\main\resources" />
+      <recent name="F:\testjava\my\springboot-scaffold\api\src\main\resources" />
       <recent name="C:\Users\a2417\Desktop\pary\springboot-scaffold\docs\image\swagger" />
       <recent name="F:\textjava\idea\springboot-restful-starter\src\main\resources\Mapper\user" />
     </key>
@@ -144,13 +202,13 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application (1)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jxys.scaffold.Application" />
-      <module name="springboot-scaffold" />
+      <option name="MAIN_CLASS_NAME" value="com.jxys.Application" />
+      <module name="api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jxys.scaffold.*" />
+          <option name="PATTERN" value="com.jxys.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,11 +224,11 @@
       </method>
     </configuration>
     <configuration name="EncryptConfigUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jxys.scaffold.auth.util.EncryptConfigUtil" />
+      <option name="MAIN_CLASS_NAME" value="com.jxys.auth.util.EncryptConfigUtil" />
       <module name="springboot-scaffold" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jxys.scaffold.auth.util.*" />
+          <option name="PATTERN" value="com.jxys.auth.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,7 +241,7 @@
       <module name="springboot-scaffold" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jxys.scaffold.auth.util.*" />
+          <option name="PATTERN" value="com.jxys.auth.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,30 +249,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="scaffold" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jxys.scaffold.Application" />
+      <module name="api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jxys.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="应用程序.Application" />
       <item itemvalue="应用程序.CodeGenerator" />
       <item itemvalue="应用程序.EncryptConfigUtil" />
       <item itemvalue="应用程序.JasyptUtil" />
-      <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -263,7 +323,8 @@
       <workItem from="1609295971643" duration="48000" />
       <workItem from="1609296610193" duration="315000" />
       <workItem from="1614146253457" duration="1955000" />
-      <workItem from="1648709038550" duration="2259000" />
+      <workItem from="1648709038550" duration="3566000" />
+      <workItem from="1648778207041" duration="885000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1603691248879</created>
@@ -475,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609296906452</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="微调了返回值，输入数据库时间，RedisService等功能">
+      <created>1648713224627</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1648713224627</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +612,8 @@
     <MESSAGE value="切换mybatis扫描工具" />
     <MESSAGE value="添加mybatis分页查询配置类" />
     <MESSAGE value="解决了swagger-bootstarup-ui的刷新报错问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决了swagger-bootstarup-ui的刷新报错问题" />
+    <MESSAGE value="微调了返回值，输入数据库时间，RedisService等功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="微调了返回值，输入数据库时间，RedisService等功能" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
