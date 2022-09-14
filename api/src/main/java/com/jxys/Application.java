@@ -5,9 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.jxys.scaffold.*.mapper")
+@MapperScan("com.jxys.mapper")
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        System.out.println("项目启动完成！！");
     }
 }

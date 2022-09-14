@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-scaffold" />
         <module name="api" />
         <module name="seed" />
         <module name="common" />
@@ -18,7 +17,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="common" options="-parameters" />
-      <module name="scaffold" options="-parameters" />
       <module name="seed" options="-parameters" />
       <module name="springboot-scaffold" options="-parameters" />
     </option>

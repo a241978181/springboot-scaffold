@@ -1,70 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
-	<springProperty scope="context" name="sqlLevel" source="log.level"></springProperty>
-	<springProperty scope="context" name="logPath" source="log.path"></springProperty>
-	<property name="encoding" value="UTF-8"/>
-	<!-- 控制台输出 -->
-	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
-		<!-- encoder 默认配置为PatternLayoutEncoder -->
-		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-			<pattern>%yellow(%d{yyyy-MM-dd HH:mm:ss}) %red([%thread]) %highlight(%-5level) %cyan(%logger{50}) - %magenta(%msg) %n</pattern>
-			<charset class="java.nio.charset.Charset">UTF-8</charset>
-		</encoder>
-	</appender>
 
-	<!--根据日志级别分离日志，分别输出到不同的文件-->
-	<appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<filter class="ch.qos.logback.classic.filter.LevelFilter">
-			<level>ERROR</level>
-			<onMatch>DENY</onMatch>
-			<onMismatch>ACCEPT</onMismatch>
-		</filter>
-		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-			<pattern>
-				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n
-			</pattern>
-			<charset class="java.nio.charset.Charset">UTF-8</charset>
-		</encoder>
-		<!--滚动策略-->
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<!--按时间保存日志 修改格式可以按小时、按天、月来保存-->
-			<fileNamePattern>${logPath}jxysgzs.info.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<!--保存时长-->
-			<MaxHistory>90</MaxHistory>
-			<!--文件大小-->
-			<totalSizeCap>1GB</totalSizeCap>
-		</rollingPolicy>
-	</appender>
+    <!-- 日志存放路径 -->
+    <property name="log.path" value="/home/jxys/logs"/>
+    <!-- 日志输出格式 -->
+    <property name="log.pattern"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{20} - [%method,%line] - %msg%n"/>
 
-	<appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>ERROR</level>
-		</filter>
-		<encoder>
-			<pattern>
-				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n
-			</pattern>
-			<charset class="java.nio.charset.Charset">UTF-8</charset>
-		</encoder>
-		<!--滚动策略-->
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<!--路径-->
-			<fileNamePattern>${logPath}jxysgzs.error.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<MaxHistory>90</MaxHistory>
-        </rollingPolicy>
+    <!-- 控制台输出 -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%yellow(%d{yyyy-MM-dd HH:mm:ss}) %red([%thread]) %highlight(%-5level) %cyan(%logger{50}) -
+                %magenta(%msg) %n
+            </pattern>
+            <charset class="java.nio.charset.Charset">UTF-8</charset>
+        </encoder>
     </appender>
+
+    <!-- 系统日志输出 -->
+    <appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/sys-info.log</file>
+        <!-- 循环政策：基于时间创建日志文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志文件名格式 -->
+            <fileNamePattern>${log.path}/sys-info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 过滤的级别 -->
+            <level>INFO</level>
+            <!-- 匹配时的操作：接收（记录） -->
+            <onMatch>ACCEPT</onMatch>
+            <!-- 不匹配时的操作：拒绝（不记录） -->
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/sys-error.log</file>
+        <!-- 循环政策：基于时间创建日志文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志文件名格式 -->
+            <fileNamePattern>${log.path}/sys-error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 过滤的级别 -->
+            <level>ERROR</level>
+            <!-- 匹配时的操作：接收（记录） -->
+            <onMatch>ACCEPT</onMatch>
+            <!-- 不匹配时的操作：拒绝（不记录） -->
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 系统模块日志级别控制  -->
+    <logger name="com.jxys.mapper" level="info"/>
+    <!-- Spring日志级别控制  -->
+    <logger name="org.springframework" level="warn"/>
 
     <!-- root: 默认日志输出 -->
     <root level="INFO">
         <appender-ref ref="Console"/>
-        <!--		<appender-ref ref="fileInfoLog"/>-->
-        <!--		<appender-ref ref="fileErrorLog"/>-->
+        <appender-ref ref="file_info"/>
+        <appender-ref ref="file_error"/>
     </root>
-
-    <logger name="com.jxys.mapper" level="${sqlLevel}">
-        <appender-ref ref="Console"/>
-        <!--		<appender-ref ref="fileInfoLog"/>-->
-        <!--		<appender-ref ref="fileErrorLog"/>-->
-    </logger>
 
 </configuration>

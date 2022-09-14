@@ -1,14 +1,14 @@
 # 开发环境配置文件
 server:
-  port: 8081     # Springboot占用端口
+  port: 8219     # Springboot占用端口
 
 spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver     # 数据库驱动
-      url: jdbc:mysql://172.16.156.210:3306/lhst?characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接
-      username: ENC(O8MvZSt7X6Wgnc5irvqDtA==)     # 数据库账号（需要替换成您的数据库账号）
-      password: ENC(Xm1z9fjQQsQCkski2jF8TwT95Ab+04rT)     # 数据库密码（需要替换成您的数据库密码）
+      url: jdbc:mysql://172.16.156.210:3306/springboot_scaffold?characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接
+      username: ENC(O8MvZSt7X6Wgnc5irvqDtA==)     # 数据库账号（需要替换成您的数据库账号,加密与解密方式可以使用EncryptConfigUtil.class）
+      password: ENC(Xm1z9fjQQsQCkski2jF8TwT95Ab+04rT)     # 数据库密码（需要替换成您的数据库密码,加密与解密方式可以使用EncryptConfigUtil.class）
       type: com.alibaba.druid.pool.DruidDataSource
       initial-size: 5
       min-idle: 5
@@ -40,3 +40,9 @@ spring:
   devtools:
     restart:
       enabled: true     # 开启热更新
+
+# 日志配置
+logging:
+  level:
+    com.jxys: debug
+    org.springframework: warn

@@ -1,5 +1,4 @@
 # 基础配置文件
-
 spring:
   application:
     name: scaffold
@@ -29,7 +28,7 @@ server:
 
 jasypt:
   encryptor:
-    # 加密（需要替换成你自己需要的秘钥）
+    # 加密（需要替换成你自己需要的秘钥，正式项目中该秘钥需要隐藏放置）
     password: xinxihuazhongxin
     # 指定加密方式
     algorithm: PBEWithMD5AndDES
@@ -37,5 +36,6 @@ jasypt:
 
 #---------mybatis------------------------
 mybatis-plus:
-  type-aliases-package: com.jxys.scaffold.*.entity
+  type-aliases-package: com.jxys.entity
   mapper-locations: classpath:/mapper/**/*Mapper.xml
+

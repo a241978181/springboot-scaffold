@@ -1,6 +1,6 @@
 # 开发环境配置文件
 server:
-  port: 8081     # Springboot占用端口
+  port: 8219     # Springboot占用端口
 
 spring:
   datasource:
@@ -40,3 +40,9 @@ spring:
   devtools:
     restart:
       enabled: true     # 开启热更新
+
+# 日志配置
+logging:
+  level:
+    com.jxys: debug
+    org.springframework: warn

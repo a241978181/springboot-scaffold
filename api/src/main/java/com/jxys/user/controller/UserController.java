@@ -5,14 +5,15 @@ import com.jxys.base.entity.Result;
 import com.jxys.data.SignInData;
 import com.jxys.data.SignUpData;
 import com.jxys.user.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/user")
 public class UserController extends BaseController {
-    @Autowired
+    @Resource
     private UserService userService;
 
     /**

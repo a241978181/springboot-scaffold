@@ -14,15 +14,15 @@ SpringBoot Scaffold脚手架
 
 ## 更新简报
 
-> v1.10
+> ### v1.20
 >
 
-1. 将项目重构为聚合项目
-2. 修改了mp的默认插入和修改字段createTime、createTime的格式，以datetime形式保存。
+> 2022-9-14
 
-> v1.02
->
-集成了[Swagger-Bootstrap-UI](https://github.com/xiaoymin/Swagger-Bootstrap-UI)
+1. 修改pom归集方式，升级几乎全部引入包版本
+2. 优化了logkback日志
+3. 引入了mybatis-plus-join（连表查询）
+4. 公共实体类中添加了mybatisplus逻辑删除字段
 
 ## [文档](./docs/index.md)
 
@@ -38,7 +38,7 @@ SpringBoot Scaffold脚手架
 - 简单封装了 jjwt，提供了一个开箱即用的认证模块
 - @Auth 注解，用注解的方式校验用户信息
 - 集成了常用的库，详见相关依赖
-- 集成了Mybatis与MybatisPlus
+- 集成了Mybatis与MybatisPlus和mybatis-plus-join
 - 集成了logback细致日志打印
 - 集成了swagger文档生成器
 - 集成了Redis

@@ -27,7 +27,6 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
      */
     @Override
     public void insertFill(MetaObject metaObject) {
-        // 默认插入的时间戳对应数据库的int类型
         // 若要使用精确到秒级的时间戳请将getCurrentUnixTimestamp()改成System.currentTimeMillis()并在数据库中设置long类型的create_time字段
         this.setFieldValByName("createTime", getCurrentUnixTimestamp(), metaObject);
     }
@@ -37,7 +36,6 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
      */
     @Override
     public void updateFill(MetaObject metaObject) {
-        // 默认插入的时间戳对应数据库的int类型
         // 若要使用精确到秒级的时间戳请将getCurrentUnixTimestamp()改成System.currentTimeMillis()并在数据库中设置long类型的create_time字段
         this.setFieldValByName("updateTime", getCurrentUnixTimestamp(), metaObject);
     }
